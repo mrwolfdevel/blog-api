@@ -9,6 +9,9 @@ export class Post {
   @Column()
   title: string;
 
+  @Column( {default: () => 'CURRENT_TIMESTAMP'})
+  post_date: Date;
+
   @Column({type: "text"})
   content: string;
 
