@@ -17,7 +17,12 @@ export class PostService {
   }
 
   findAll() {
-    return `This action returns all post`;
+    return this.postRepository.find();
+  }
+
+
+  findStart() {
+    return this.postRepository.find({take: 10});
   }
 
   findOne(id: number) {

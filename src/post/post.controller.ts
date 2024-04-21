@@ -12,6 +12,11 @@ export class PostController {
     return this.postService.create(createPostDto);
   }
 
+  @Get('start')
+  findStart() {
+    return this.postService.findStart();
+  }
+
   @Get()
   findAll() {
     return this.postService.findAll();
